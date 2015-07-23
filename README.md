@@ -12,7 +12,8 @@ and performs a change in a document.
 
 Current migrators are:
 
-
+- pouchdb-migrate
+- view-update (to be included)
 
 Different migrators serve different situations. The following table sums up the space:
 
@@ -29,3 +30,49 @@ Migrations are included their own folder with a descriptive name of what it does
 - a migration file named `migration.js`
 - a `README.md` for documentation and references of the migration.
 
+
+Installation
+---
+
+get the repo
+
+```
+git clone git@github.com:eHealthAfrica/eha-couch-migrations.git
+cd eha-couch-migrations
+```
+
+and run ` npm install `
+
+
+Usage
+-----
+
+in this example we'll run the `pouchdb-migrate` migrator against `db`, using the `deduplicate-source-cases` migration.
+
+bin/main.js 'pouchdb-migrate' 'http://user:password@localhost:5984/test' deduplicate-source-cases
+
+`db` is any db format accepted by `PouchDB`
+
+Development
+-----------
+
+Run the tests from project root with:
+
+```sh
+npm test
+```
+
+## License
+
+Copyright 2015 [eHealth Africa](http://ehealthafrica.org)
+
+Licensed under the Apache License, Version 2.0 (the "License"); you
+may not use this file except in compliance with the License.  You may
+obtain a copy of the License [here](/LICENSE).
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied.  See the License for the specific language governing
+permissions and limitations under the License.
+Apache License 2.0

@@ -1,0 +1,40 @@
+{
+  "name": "eha-couch-migrations",
+  "version": "0.0.0",
+  "description": "EhealthAfrica couchb migrations",
+  "main": "lib/index.js",
+  "bin": "bin/main.js",
+  "scripts": {
+    "test": "tape-dots test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eHealthAfrica/eha-couch-migrations.git"
+  },
+  "keywords": [
+    "data",
+    "maintenance",
+    "migration",
+    "couchdb",
+    "pouchdb",
+    "merge",
+    "docs"
+  ],
+  "author": "Ernesto Miguez <ernesto.miguez@ehealthnigeria.org>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/eHealthAfrica/eha-couch-migrations/issues"
+  },
+  "homepage": "https://github.com/eHealthAfrica/eha-couch-migrations#readme",
+  "devDependencies": {
+    "redtape": "^1.0.0",
+    "tape": "^4.0.0",
+    "tape-dots": "^1.0.0"
+  },
+  "dependencies": {
+    "jsondir": "^0.1.3",
+    "lodash": "^3.10.0",
+    "pouchdb": "^3.6.0",
+    "pouchdb-migrate": "^1.0.1"
+  }
+}
