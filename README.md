@@ -31,6 +31,9 @@ Migrations are included their own folder with a descriptive name of what it does
 - a migration file named `migration.js`
 - a `README.md` for documentation and references of the migration.
 
+# migration management
+
+This has been raised on (this issue)[#5] and here https://github.com/eHealthAfrica/model-discussion/issues/4
 
 Installation
 ---
