@@ -18,10 +18,11 @@ Current migrators are:
 Different migrators serve different situations. The following table sums up the space:
 
 
-| migrator                                                             | migration speed  | data size     | conflicts possiblity |
-| -------------                                                        | -------------    | ------------- | -------------------- |
-| [pouchdb-migrate](https://github.com/eHealthAfrica/pouchdb-migrate)  | fast             | small         |  high                |
-| view + update function                                               | slow             | big           |  low                 |
+| migrator                                                                                             | migration speed  | data size     | conflicts possiblity |
+| -------------                                                                                        | -------------    | ------------- | -------------------- |
+| [pouchdb-migrate](https://github.com/eHealthAfrica/pouchdb-migrate)                                  | fast             | small         |  high                |
+| view + update function                                                                               | slow             | big           |  low                 |
+| nano script [example call center migrations](https://github.com/eHealthAfrica/call-center-migration) | fast             |    ?          |     ?                |
 
 
 # migrations
@@ -52,6 +53,14 @@ in this example we'll run the `pouchdb-migrate` migrator against `db`, using the
 bin/main.js 'pouchdb-migrate' 'http://user:password@localhost:5984/test' deduplicate-source-cases
 
 `db` is any db format accepted by `PouchDB`
+
+Docker Usage
+----
+
+There is a docker image for the [call center migrations case](https://github.com/eHealthAfrica/call-center-migration), name `docker-registry.eocng.org/ehealthafrica/call_center_migrator`
+with tag depending on the used branch.
+The repo is [here](https://github.com/eHealthAfrica/ehealth-deployment/tree/docker/projects/call-center-migrations).
+
 
 Development
 -----------
